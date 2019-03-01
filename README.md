@@ -108,7 +108,8 @@ print(model_hottolink.wv.similarity("尊い","気高い")
 ### 分散表現の性能評価
 * 評価方法：
 	* 日本語大規模SNSコーパスによる分散表現とWikipediaによる分散表現の性能を比較する
-	* スコアの妥当性を検証するために，日本語大規模SNS分散表現と同様の方法で作成したWikipediaによる分散表現と東北大により公開されている[日本語Wikipedia エンティティベクトル](http://www.cl.ecei.tohoku.ac.jp/~m-suzuki/jawiki_vector/)の性能を比較する
+	* スコアの妥当性を検証するために，日本語大規模SNS分散表現と同様の方法で作成した（※1）Wikipediaによる分散表現と東北大により公開されている[日本語Wikipedia エンティティベクトル](http://www.cl.ecei.tohoku.ac.jp/~m-suzuki/jawiki_vector/)の性能を比較する
+		* ※１:word2vec実行時のパラメータが同一ではないので厳密に同じではないが，それ以外（前処理など）は同じ方法である
 
 * 評価指標：Spearmanの順位相関係数
 
@@ -213,7 +214,7 @@ print(model_hottolink.wv.similarity("尊い","気高い")
 
 	パラメータ|値
 	----|----
-	アルゴリズム|Word2Vec [Skip-Gram]
+	アルゴリズム|Word2Vec [CBOW]
 	次元数|200
 	最低単語頻度|10
 	context window size|5
