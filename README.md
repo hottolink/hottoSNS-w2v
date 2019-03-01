@@ -45,11 +45,15 @@
 
 #### 付属評価コードの利用方法
 ```
+# リポジトリのClone
 git clone https://github.com/hottolink/hottoSNS-w2v.git
 cd hottoSNS-w2v
+
+# 取得した分散表現ファイルを `corpus/` 以下に配置
+cp [download_dir]/hottoSNS-w2v_20190301.tar.bz2 corpus
+
+# 評価環境の構築・評価実行
 sh setup.sh
-corpus/以下にダウンロードしたhottolink_broadsnscorpus.tar.gzを配置
-tar zxf corpus/hottolink_broadsnscorpus.tar.gz
 python run_evaluate.py
 ```
 
@@ -58,6 +62,7 @@ python run_evaluate.py
 from gensim.models import KeyedVectors
 from gensim.models import Word2Vec
 
+corpusdir = "./corpus/"
 file_w2v_hottolink = corpusdir + "w2v_all_vector200_win5_sgns0.vec"
 
 model_hottolink = KeyedVectors.load_word2vec_format(file_w2v_hottolink, binary=False) 
