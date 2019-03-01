@@ -3,6 +3,7 @@
 ## 概要
 * 日本語大規模SNS+Webコーパス（以下，大規模SNSコーパス）から作成したword2vecによる単語分散表現を構築した
 * 本単語分散表現モデル(以下，大規模SNSモデル）は下記登録フォームから登録した方のみに配布する
+  * 利用規約は本README.mdの末尾に記載されている．またLICENSE.mdにも同じ内容が記載されている．
 
 [登録フォーム](https://forms.office.com/Pages/ResponsePage.aspx?id=Zpu1Ffmdi02AfxgH3uo25PxaMnBWkvJLsXoQLeuzhoBUQlVKM0NQNVFGRUUzSVdJQjBTUFA5Vko4QSQlQCN0PWcu)
 
