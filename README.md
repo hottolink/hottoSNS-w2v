@@ -109,7 +109,7 @@ print(model_hottolink.wv.similarity("尊い","気高い")
 	* 日本語大規模SNSコーパスによる分散表現とWikipediaによる分散表現の性能を比較する
 	* スコアの妥当性を検証するために，日本語大規模SNS分散表現と同様の方法で作成したWikipediaによる分散表現と東北大により公開されている[日本語Wikipedia エンティティベクトル](http://www.cl.ecei.tohoku.ac.jp/~m-suzuki/jawiki_vector/)の性能を比較する
 
-* 評価指標：Speamanの順位相関係数
+* 評価指標：Spearmanの順位相関係数
 
 * 評価対象モデル
 	* hottoSNS-w2vモデル
@@ -134,7 +134,7 @@ print(model_hottolink.wv.similarity("尊い","気高い")
 [猪原] 猪原 敬介，内海 彰： 日本語類似度・関連度データセットの作成，言語処理学会第24回年次大会発表論文集，pp.1011-1014 (2018).
 
 
-### コーパスの統計情報
+### コーパス・単語分散表現の構築方法
 
 ####  平文コーパスの収集・構築
 1. SNSデータ
