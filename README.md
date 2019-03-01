@@ -4,6 +4,9 @@
 * 日本語大規模SNS+Webコーパス（以下，大規模SNSコーパス）から作成したword2vecによる分散表現を構築した
 * 本分散表現モデル(以下，大規模SNSモデル）は下記登録フォームから登録した方のみに配布する
 
+[登録フォーム](https://forms.office.com/Pages/ResponsePage.aspx?id=Zpu1Ffmdi02AfxgH3uo25PxaMnBWkvJLsXoQLeuzhoBUQlVKM0NQNVFGRUUzSVdJQjBTUFA5Vko4QSQlQCN0PWcu)
+
+
 ## 配布リソースに関する説明
 ### 日本語大規模SNS+Webコーパス
 * 日本語大規模SNS+Webコーパスとは，以下3種類の媒体から作成した超大規模コーパスである．

@@ -38,8 +38,7 @@ def evaluate_model(model,df_answer):
 
     corr, p_value = stats.spearmanr(df_answer.order, df_test.order)
 
-    print("%1.3f" % (corr)
-    
+    print("%1.3f" % (corr))
 
 if __name__ == '__main__':
     df_answer_jwsan = pd.read_csv(file_jwsan)
