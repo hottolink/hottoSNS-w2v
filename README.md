@@ -27,7 +27,6 @@
         - [分かち書きコーパスの構築](#分かち書きコーパスの構築)
         - [単語分散表現(Word2Vec)の学習](#単語分散表現word2vecの学習)
         - [コーパスの規模](#コーパスの規模)
-        - [(参考)Twitterの分かち書きについて](#参考twitterの分かち書きについて)
     - [利用規約](#利用規約)
 
 <!-- /TOC -->
@@ -192,7 +191,7 @@ print(model_hottolink.wv.similarity("尊い","気高い")
 		* 分かち書き器 : Juman
 			* 全角に変換して解析実施，解析結果を半角に変換
 		* 最小形態素数 : 10 (形態素数が9以下の文は削除)
-	2．ブログ
+	1. ブログ
 		* 分かち書き器 : MeCab + [mecab-ipadic-NEologd(2016年2月)](https://github.com/neologd/mecab-ipadic-neologd)
 		* 最小形態素数 : 10 (形態素数が9以下の文は削除)
 
@@ -214,7 +213,7 @@ print(model_hottolink.wv.similarity("尊い","気高い")
 
 	パラメータ|値
 	----|----
-	アルゴリズム|Word2Vec [CBOW,Skip-Gram]
+	アルゴリズム|Word2Vec [Skip-Gram]
 	次元数|200
 	最低単語頻度|10
 	context window size|5
@@ -253,49 +252,11 @@ print(model_hottolink.wv.similarity("尊い","気高い")
 	|-----------------------|-------------|
 	| 行数[Mil]               | 282  |
 	| トークン数[Giga]      | 12         |
-	| ユニークな形態素数    | 計量中   |
 	| 　　うち，頻度10回以上 | 2,067,629   |
 
 
 
-#### (参考)Twitterの分かち書きについて
-* Twitterはくだけた文体が多いことから，通常の形態素解析器では分かち書きの性能が十分でないことが知られている
-	* F値は，MeCab(IPADIC) = 90%前後，KyTea(BCCWJ+UniDic) = 92%程度 という報告がある[1,2]
-	* KyTeaをTwitterコーパスで追加学習すると，95%程度まで向上させられる？[2]
-	* Jumanは未知語モデルを搭載しているため，比較的頑健な処理ができるとされている[3]
 
-	```
-    [1] 北川善彬, 小町守. 深層ニューラルネットワークを利用した日本語単語分割.
-	[2] 森信介. 多様なテキストの言語処理(招待講演). 第112回音声言語情報処理研究会 (SIG-SLP).  http://sig-slp.jp/2016-SLP-112.html
-	[3] 笹野遼平, 黒橋禎夫, and 奥村学. "日本語形態素解析における未知語処理の一手法―既知語から派生した表記と未知オノマトペの処理―." 自然言語処理 21.6 (2014): 1183-1205.
-	```
-
-* このため，Twitterの分かち書き精度向上を目的として構築されたコーパス(Twitter Corpus)が存在する
-    * 約1,000文の分かち書き・品詞付与を行ったデータセット
-
-    ```
-    大崎彩葉, 唐口翔平, 大迫拓矢, 佐々木俊哉, 北川善彬, 堺澤勇也, 小町守. Twitter 日本語形態素解析のためのコーパス構築.
-    https://github.com/tmu-nlp/TwitterCorpus
-	```
-	
-* そこで，実際にTwitterの本文を分かち書きを行い，いずれの方法が優れているかを簡単にテストした
-	* 対象文 : 129文をランダム抽出
-	* 形態素解析器および辞書・モデル : 以下の5種類
-		1. MeCab + IPADIC
-		2. MeCab + [mecab-ipadic-NEologd](https://github.com/neologd/mecab-ipadic-neologd)
-		3. Juman
-		4. KyTea + default(BCCWJ+UniDic)
-		5. KyTea + Twitter Corpus(re-training)
-	* 評価方法 : 文ごとに，分かち書き誤りが特に少ない方法に投票(複数投票可)
-* 得票結果は以下のとおり．今次のテストでは，Jumanが最良という結果になった
-
-	| Tokenizer | Dict / Model          | 得票数 |
-	|-----------|-----------------------|--------|
-	| MeCab     | ipadic                | 37     |
-	| MeCab     | mecab-ipadic-NEologd  | 41     |
-	| Juman     | default               | 47     |
-	| KyTea     | default(BCCWJ+UniDic) | 16     |
-	| KyTea     | twitter               | 14     |
 
 
 ## 利用規約
