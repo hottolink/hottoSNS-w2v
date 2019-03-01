@@ -1,4 +1,4 @@
-## 日本語大規模SNS+Webコーパスによる分散表現モデル
+## hottoSNS-w2c: 日本語大規模SNS+Webコーパスによる分散表現モデル
 
 ### 概要
 * 日本語大規模SNS+Webコーパス（以下，大規模SNSコーパス）から作成したword2vecによる分散表現を構築した
@@ -33,8 +33,8 @@
 
 #### 付属評価コードの利用方法
 ```
-git clone [URL]
-cd [DIR名]
+git clone https://github.com/hottolink/hottoSNS-w2v.git
+cd hottoSNS-w2v
 sh setup.sh
 corpus/以下にダウンロードしたhottolink_broadsnscorpus.tar.gzを配置
 tar zxf corpus/hottolink_broadsnscorpus.tar.gz
@@ -99,8 +99,8 @@ print(model_hottolink.wv.similarity("尊い","気高い")
 	2. Twitter
 		* 期間 : 2016年に投稿されたデータの一部
 		* 除外 : 
-			1. 公式RT / 非公式RT : 
-			2. 公式モバイルアプリ（Twitter for iPhone, Twitter for Android）以外からの投稿 : 
+			1. 公式RT / 非公式RT 
+			2. 公式モバイルアプリ（Twitter for iPhone, Twitter for Android）以外からの投稿 
 				* 目的はいずれも，ReTweet / スパムツイート / BOTツイート に起因する重複文の除外である
 				* 投稿数は十分な量が確保できるので，精緻なフィルタを考える必要はない
 
