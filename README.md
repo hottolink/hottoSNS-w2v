@@ -16,7 +16,7 @@
  	1. 日本語Wikipedia
  	2. 自動収集ウェブページ
 
-* 超大規模である．量的には，英語NLPでしばしば利用される[English Gigaword](https://catalog.ldc.upenn.edu/ldc2011t07)を上回っている．
+* 超大規模である．量的には，英語NLPでしばしば利用される[English Gigaword](https://catalog.ldc.upenn.edu/LDC2011T07)を上回っている．
 * 各媒体の規模は，SNSデータ > 自動収集ウェブページ  > 日本語Wikipedia の順である
 * 適切な前処理および長単位志向の分かち書きを行ってあるため，語彙情報が豊富かつ応用向きである
     * 単語分散表現の語彙数は，約200万語である
