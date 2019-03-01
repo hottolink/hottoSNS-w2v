@@ -6,7 +6,7 @@
 
 [登録フォーム](https://forms.office.com/Pages/ResponsePage.aspx?id=Zpu1Ffmdi02AfxgH3uo25PxaMnBWkvJLsXoQLeuzhoBUQlVKM0NQNVFGRUUzSVdJQjBTUFA5Vko4QSQlQCN0PWcu)
 
-![登録フォーム](https://github.com/hottolink/hottoSNS-w2v/blob/master/images/QR_hottoSNS-w2v.png)
+<img src="https://github.com/hottolink/hottoSNS-w2v/blob/master/images/QR_hottoSNS-w2v.png" width="256">
 
 ## 配布リソースに関する説明
 ### 日本語大規模SNS+Webコーパス
