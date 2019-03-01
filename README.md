@@ -3,11 +3,34 @@
 ## 概要
 * 日本語大規模SNS+Webコーパス（以下，大規模SNSコーパス）から作成したword2vecによる単語分散表現を構築した
 * 本単語分散表現モデル(以下，大規模SNSモデル）は下記登録フォームから登録した方のみに配布する
-  * 利用規約は本README.mdの末尾に記載されている．またLICENSE.mdにも同じ内容が記載されている．
+  * [利用規約](#利用規約)は本README.mdの末尾に記載されている．またLICENSE.mdにも同じ内容が記載されている．
 
 [登録フォーム](https://forms.office.com/Pages/ResponsePage.aspx?id=Zpu1Ffmdi02AfxgH3uo25PxaMnBWkvJLsXoQLeuzhoBUQlVKM0NQNVFGRUUzSVdJQjBTUFA5Vko4QSQlQCN0PWcu)
 
 <img src="https://github.com/hottolink/hottoSNS-w2v/blob/master/images/QR_hottoSNS-w2v.png" width="128">
+
+<!-- TOC -->
+- [hottoSNS-w2v: 日本語大規模SNS+Webコーパスによる単語分散表現モデル](#hottosns-w2v-日本語大規模snswebコーパスによる単語分散表現モデル)
+    - [概要](#概要)
+    - [配布リソースに関する説明](#配布リソースに関する説明)
+        - [日本語大規模SNS+Webコーパス](#日本語大規模snswebコーパス)
+        - [ファイル構成](#ファイル構成)
+        - [利用方法](#利用方法)
+            - [実行確認環境](#実行確認環境)
+            - [付属評価コードの利用方法](#付属評価コードの利用方法)
+            - [モデルの読み込み方法](#モデルの読み込み方法)
+        - [分散表現の性能評価](#分散表現の性能評価)
+        - [コーパスの統計情報](#コーパスの統計情報)
+            - [平文コーパスの収集・構築](#平文コーパスの収集・構築)
+            - [前処理](#前処理)
+            - [分かち書きコーパスの構築](#分かち書きコーパスの構築)
+            - [単語分散表現(Word2Vec)の学習](#単語分散表現word2vecの学習)
+            - [コーパスの規模](#コーパスの規模)
+            - [(参考)Twitterの分かち書きについて](#参考twitterの分かち書きについて)
+    - [利用規約](#利用規約)
+
+<!-- /TOC -->
+
 
 ## 配布リソースに関する説明
 ### 日本語大規模SNS+Webコーパス
