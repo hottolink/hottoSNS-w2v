@@ -133,9 +133,6 @@ print(model_hottolink.wv.similarity("尊い","気高い")
 	* Wikipediaのみで学習した2つのモデルと比較し，良い性能が得られている
 	* Wikipediaのみが学習した2つのモデルがほぼ同程度の性能であるため，分散表現の学習手法は妥当であると推測される
 
-[猪原] 猪原 敬介，内海 彰： 日本語類似度・関連度データセットの作成，言語処理学会第24回年次大会発表論文集，pp.1011-1014 (2018).
-
-
 ### コーパス・単語分散表現の構築方法
 
 ####  平文コーパスの収集・構築
@@ -225,7 +222,8 @@ print(model_hottolink.wv.similarity("尊い","気高い")
 	iteration|20
 	単語表現|**ｗ**
 
-[Mikolov]: Mikolov, T., and J. Dean. "Distributed representations of words and phrases and their compositionality." Advances in neural information processing systems (2013).
+[猪原] 猪原 敬介，内海 彰, "日本語類似度・関連度データセットの作成，", 言語処理学会第24回年次大会発表論文集，pp.1011-1014 (2018).
+[Mikolov]: Mikolov, T., and J. Dean. "Distributed representations of words and phrases and their compositionality.", Advances in neural information processing systems (2013).
 
 #### コーパスの規模
 * 構築したコーパスの規模は，以下のとおりである
