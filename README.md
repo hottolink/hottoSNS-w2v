@@ -223,6 +223,7 @@ print(model_hottolink.wv.similarity("尊い","気高い")
 	単語表現|**ｗ**
 
 [猪原] 猪原 敬介，内海 彰, "日本語類似度・関連度データセットの作成，", 言語処理学会第24回年次大会発表論文集，pp.1011-1014 (2018).
+
 [Mikolov]: Mikolov, T., and J. Dean. "Distributed representations of words and phrases and their compositionality.", Advances in neural information processing systems (2013).
 
 #### コーパスの規模
