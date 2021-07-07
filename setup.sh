@@ -1,3 +1,8 @@
+#!/usr/bin/env bash -eux
+
+if [ "./requirements.txt" ];then
+    python -m pip install -r requirements.txt
+fi
 
 if [ ! -e "./corpus/jwsan.zip" ];then
     wget http://www.utm.inf.uec.ac.jp/JWSAN/jwsan.zip -O corpus/jwsan.zip
@@ -16,6 +21,6 @@ fi
 
 if [ ! -e "./corpus/w2v_all_vector200_win5_sgns0.vec" ];then
     cd corpus
-    tar jvxf hottoSNS-w2v_20190301.tar.bz2 
+    tar jvxf hottoSNS-w2v_20190301.tar.bz2
     cd ..
 fi
