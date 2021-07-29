@@ -1,6 +1,6 @@
 #!/usr/bin/env bash -eux
 
-if [ "./requirements.txt" ];then
+if [ -f "./requirements.txt" ];then
     python -m pip install -r requirements.txt
 fi
 
